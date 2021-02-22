@@ -5,6 +5,7 @@ header div {
   width: 30%;
   position: absolute;
   font-size: 40px;
+  margin-top: 40px;
 }
 #midSection {
   padding: 20px;
@@ -17,22 +18,44 @@ header div {
 }
 #time {
   position: absolute;
-  margin-left: 80%;
+  margin-left: 65%;
   margin-top: -45px;
 }
 #div1 {
-  margin-left: 5%;
-  font-size: 60px;
+  margin-left: -10%;
+  font-size: 30px;
   width: 50%;
 }
 
 #div3 {
-  margin-left: 65%;
+  margin-left: 75%;
 }
 #main {
   position: absolute;
   margin-top: 100px;
   width: 100%;
+}
+#next {
+  margin-left: -25%;
+  width: 50%;
+  position: absolute;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#next:hover,
+#again:hover,
+#leaderboard:hover {
+  background-color: rgb(153, 153, 153);
+}
+#again,
+#leaderboard {
+  height: 50px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
 }
 footer {
   position: absolute;
@@ -40,14 +63,18 @@ footer {
 }
 #start {
   font-size: 50px;
-  height: 100px;
-  width: 20%;
-  border-left: 2px solid black;
+  height: 300px;
+  width: 300px;
+  margin-top: 150px;
+  border-left: 4px solid black;
   border-right: 1px solid black;
-  border-bottom: 6px solid black;
-  border-radius: 30px;
-  background-color: rgb(77, 77, 77);
+  border-bottom: 10px solid black;
+  border-radius: 300px;
+  background-color: rgb(246, 0, 0);
   color: white;
+}
+#start:hover {
+  background-color: rgb(192, 0, 0);
 }
 #question {
   border-left: 2px solid black;
@@ -56,9 +83,11 @@ footer {
   border-radius: 20px;
   width: 50%;
   margin-left: 25%;
-  background-color: rgb(77, 77, 77);
+  background-color: rgb(104, 104, 104);
   color: white;
   font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #correct,
@@ -71,9 +100,11 @@ footer {
   width: 50%;
   margin-left: 25%;
   font-size: 30px;
+  background-color: rgb(0, 0, 168);
+  color: white;
 }
 #correct:hover,
-#fake:hover,
+#fake0:hover,
 #fake1:hover,
 #fake2:hover {
   border-bottom: 2px solid black;
@@ -82,6 +113,7 @@ footer {
   width: 50%;
   margin-left: 25%;
   background-color: rgb(157, 163, 255);
+  color: black;
 }
 h3 {
   font-size: 30px;
