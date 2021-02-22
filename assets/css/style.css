@@ -62,7 +62,9 @@ footer {
 }
 
 #correct,
-#fake {
+#fake0,
+#fake1,
+#fake2 {
   border-bottom: 2px solid black;
   border-top: 6px solid black;
   border-radius: 20px;
@@ -71,7 +73,9 @@ footer {
   font-size: 30px;
 }
 #correct:hover,
-#fake:hover {
+#fake:hover,
+#fake1:hover,
+#fake2:hover {
   border-bottom: 2px solid black;
   border-top: 6px solid black;
   border-radius: 20px;
@@ -83,5 +87,9 @@ h3 {
   font-size: 30px;
 }
 h3:hover {
-  background-color: greenyellow;
+  background-color: rgb(0, 10, 102);
+  color: white;
+}
+#leaderboard1 {
+  font-size: 40px;
 }

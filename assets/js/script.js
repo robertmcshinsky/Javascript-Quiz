@@ -71,6 +71,9 @@ function displayQuiz() {
     document.getElementById("correct").addEventListener("click", function () {
       myScore++;
       score[playerNum] = myScore;
+      document.getElementById("correct").style.backgroundColor = "green";
+      ++i;
+      displayQuiz();
     });
   }
 
@@ -85,7 +88,8 @@ function displayQuiz() {
     for (let k = 0; k < 3; ++k) {
       let rnd = Math.floor(Math.random() * 3);
       let randNum = Math.floor(Math.random() * wrongAnswers.length);
-      let fakeAnswer = "<h1 id='fake'>" + wrongAnswers[randNum] + "</h1>";
+      let fakeAnswer =
+        "<h1 id='fake" + k + "'>" + wrongAnswers[randNum] + "</h1>";
 
       if (rnd > 1) {
         aboveOrBelow = "beforeEnd";
@@ -99,8 +103,17 @@ function displayQuiz() {
           .insertAdjacentHTML(aboveOrBelow, fakeAnswer);
       }
     }
-    document.getElementById("fake").addEventListener("click", function () {
+    document.getElementById("fake0").addEventListener("click", function () {
       timerEl.innerText = timerEl.innerText - 5;
+      document.getElementById("fake0").style.backgroundColor = "red";
+    });
+    document.getElementById("fake1").addEventListener("click", function () {
+      timerEl.innerText = timerEl.innerText - 5;
+      document.getElementById("fake1").style.backgroundColor = "red";
+    });
+    document.getElementById("fake2").addEventListener("click", function () {
+      timerEl.innerText = timerEl.innerText - 5;
+      document.getElementById("fake2").style.backgroundColor = "red";
     });
   }
 
@@ -153,7 +166,7 @@ function displayLeaderboard() {
   resetPage();
 
   document.getElementById("topSection").innerHTML =
-    "<h1 id='leaderboard'>Leaderboard</h1>";
+    "<h1 id='leaderboard1'>Leaderboard</h1>";
 
   for (let i = 0; i < leaderboard.length; ++i) {
     document
@@ -176,6 +189,7 @@ function timer() {
     timerEl.innerHTML = --times;
   } else {
     stopTimer();
+    displayScore();
   }
   if (times < 0) {
     gameOver();
@@ -190,7 +204,10 @@ function gameOver() {
   console.log("gameOver");
   resetPage();
   document.getElementById("topSection").innerHTML =
-    "<h1 id='gameOver'>Game Over</h1>";
+    "<h1 id='gameOver'>Game Over</h1>" +
+    "</h1><button id='again'>Try Again</button>";
+  document.getElementById("again").addEventListener("click", main);
+  timerEl.innerText = 20;
 }
 
 function storeInitialsAndScore() {
