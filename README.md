@@ -13,3 +13,5 @@
 ![question page](\assets\images\JS-quiz-question.png)
 
 ![leaderboard](assets\images\JS-quiz-leaderboard.png)
+
+![Languages Used](assets/images/html-css-js.png)
